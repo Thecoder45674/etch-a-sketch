@@ -23,14 +23,14 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    
+    width: 960px;
+    height: 960px;
 }
 
 .cell {
     border: 1px solid black;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
-    
+    transition: background-color 0.3s ease; 
 }
 
 #controls {

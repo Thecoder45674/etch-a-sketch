@@ -1,5 +1,5 @@
 const GRIDSIDE = 960;
-let size = 16;
+let squaresPerSide = 16;
 
 let isRainbowMode = false;
 
@@ -21,13 +21,13 @@ function toggleMode() {
 }
 
 function updateSize() {
-    const newSize = prompt("Enter Size between 1 - 100");
+    const newSize = prompt("Enter Size between 1 - 35");
 
-    if (!isNaN(newSize) && (newSize >= 1 && newSize <= 100)) {
-        size = newSize;
-        createGrid(size); 
+    if (!isNaN(newSize) && (newSize >= 1 && newSize <= 35)) {
+        squaresPerSide = newSize;
+        createGrid(squaresPerSide); 
     } else {
-        alert("Please enter a valid number between 1 and 100.");
+        alert("Please enter a valid number between 1 and 35.");
     };
 }
 
@@ -51,24 +51,21 @@ function changeCellBackground() {
     }
 }
 
-function createGrid(size) {
+function createGrid(squaresPerSide) {
     grid.innerHTML = '';
 
-    grid.style.width = `${GRIDSIDE}px`;
-    grid.style.height = `${GRIDSIDE}px`;
+    const numOfSquare = squaresPerSide * squaresPerSide;
+    const widthOrHeight = `${(GRIDSIDE / squaresPerSide) - 2}px`
 
-    const cellSize = Math.floor(GRIDSIDE / size) - 2;
-
-    for (let i = 0; i < size * size; i++) {
+    for (let i = 0; i < numOfSquare; i++) {
         const gridCell = document.createElement("div");
+        
+        gridCell.style.width = gridCell.style.height = widthOrHeight;
         gridCell.classList.add("cell");
 
-        gridCell.style.width = `${cellSize}px`;
-        gridCell.style.height = `${cellSize}px`;
+        grid.appendChild(gridCell);
 
         gridCell.addEventListener("mouseover", changeCellBackground);
-
-        grid.appendChild(gridCell);
     }
 }
 
@@ -76,4 +73,4 @@ changeSize.addEventListener("click", updateSize)
 changeMode.addEventListener("click", toggleMode);
 reset.addEventListener("click", resetGrid)
 
-createGrid(size);
+createGrid(squaresPerSide);
