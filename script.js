@@ -1,4 +1,4 @@
-const GRIDSIDE = 960;
+const GRIDSIDE = 800;
 let squaresPerSide = 16;
 
 let isRainbowMode = false;
@@ -21,13 +21,13 @@ function toggleMode() {
 }
 
 function updateSize() {
-    const newSize = prompt("Enter Size between 1 - 35");
+    const newSize = prompt("Enter Size between 1 - 30");
 
-    if (!isNaN(newSize) && (newSize >= 1 && newSize <= 35)) {
+    if (!isNaN(newSize) && (newSize >= 1 && newSize <= 30)) {
         squaresPerSide = newSize;
         createGrid(squaresPerSide); 
     } else {
-        alert("Please enter a valid number between 1 and 35.");
+        alert("Please enter a valid number between 1 and 30.");
     };
 }
 
