@@ -1,5 +1,5 @@
 const GRIDSIDE = 600;
-let squaresPerSide = 100;
+let squaresPerSide = 16;
 
 let isRainbowMode = false;
 
