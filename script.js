@@ -21,7 +21,7 @@ function toggleMode() {
 }
 
 function updateSize() {
-    const newSize = prompt("Enter Size between 1 - 30");
+    const newSize = prompt("Enter Size between 1 - 100");
 
     if (!isNaN(newSize) && (newSize >= 1 && newSize <= 100)) {
         squaresPerSide = newSize;
