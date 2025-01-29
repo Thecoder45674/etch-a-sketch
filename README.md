@@ -1,12 +1,12 @@
-## Etch-a-sketch
-A simple web-based drawing app built as part of a learning project using HTML, CSS, and JavaScript.
+# Etch-a-Sketch
 
-## Description
-The Etch-a-Sketch project is an interactive web application designed to showcase fundamental web development skills. It allows users to draw on a grid by hovering over cells. The app offers customizable grid sizes and different drawing modes for a fun and creative experience. Key features include:
+## Table of Contents
+- [General Info](#general-info)
+- [Technologies Used](#technologies-used)
+- [Live Demo](#live-demo)
 
-- Dynamic grid generation and resizing.
-- Hover-based drawing with normal and rainbow color modes.
-- A reset button to clear the grid.
+## General Info
+The Etch-a-Sketch project is a simple web-based drawing application built to practice DOM manipulation skills. Users can draw on a grid by hovering over cells. The app features customizable grid sizes and different drawing modes for a fun and interactive experience.
 
 ## Technologies Used
 - HTML
